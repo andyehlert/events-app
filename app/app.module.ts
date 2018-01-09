@@ -15,6 +15,7 @@ import {
     EventsListComponent,
     EventThumbnailComponent
 } from './events/index';
+import {AuthService} from "./user/auth.service";
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import {
         ToastrService,
         EventRouteActivator,
         EventsListResolver,
+        AuthService,
         { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState }
     ],
     bootstrap: [EventsAppComponent]
