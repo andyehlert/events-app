@@ -18,7 +18,7 @@ import {
 import {
     CreateEventComponent,
     CreateSessionComponent,
-    EventRouteActivator,
+    EventResolver,
     EventsListResolver,
     EventDetailsComponent,
     EventService,
@@ -30,6 +30,7 @@ import {
     VoterService,
     LocationValidator
 } from './events/index';
+import {HttpModule} from "@angular/http";
 
 // Lets TypeScript know that this is a known variable
 declare let toastr:Toastr;
@@ -39,6 +40,7 @@ declare let jQuery:Object;
     imports: [
         BrowserModule,
         FormsModule,
+        HttpModule,
         ReactiveFormsModule,
         RouterModule.forRoot(appRoutes)
     ],
@@ -63,7 +65,7 @@ declare let jQuery:Object;
         EventService,
         {provide: TOASTR_TOKEN, useValue: toastr},
         {provide: JQ_TOKEN, useValue: jQuery},
-        EventRouteActivator,
+        EventResolver,
         EventsListResolver,
         AuthService,
         VoterService,
