@@ -25,7 +25,9 @@ import {
     EventsListComponent,
     EventThumbnailComponent,
     SessionListComponent,
-    DurationPipe
+    DurationPipe,
+    UpvoteComponent,
+    VoterService
 } from './events/index';
 
 // Lets TypeScript know that this is a known variable
@@ -52,7 +54,8 @@ declare let jQuery:Object;
         CollapsibleWellComponent,
         DurationPipe,
         SimpleModalComponent,
-        ModalTriggerDirective
+        ModalTriggerDirective,
+        UpvoteComponent
     ],
     providers: [
         EventService,
@@ -61,6 +64,7 @@ declare let jQuery:Object;
         EventRouteActivator,
         EventsListResolver,
         AuthService,
+        VoterService,
         { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState }
     ],
     bootstrap: [EventsAppComponent]
