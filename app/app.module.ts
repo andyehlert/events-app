@@ -27,7 +27,8 @@ import {
     SessionListComponent,
     DurationPipe,
     UpvoteComponent,
-    VoterService
+    VoterService,
+    LocationValidator
 } from './events/index';
 
 // Lets TypeScript know that this is a known variable
@@ -55,7 +56,8 @@ declare let jQuery:Object;
         DurationPipe,
         SimpleModalComponent,
         ModalTriggerDirective,
-        UpvoteComponent
+        UpvoteComponent,
+        LocationValidator
     ],
     providers: [
         EventService,
