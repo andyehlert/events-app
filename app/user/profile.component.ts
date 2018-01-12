@@ -50,4 +50,10 @@ export class ProfileComponent implements OnInit {
     cancel() {
         this.router.navigate(['events']);
     }
+
+    logout() {
+        this.auth.logout().subscribe(() => {
+            this.router.navigate(['/user/login']);
+        });
+    }
 }
