@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {Observable} from "rxjs/RX";
+import {Observable} from "rxjs/Observable";
 import {Http, Response, Headers, RequestOptions} from "@angular/http";
 import {IEvent} from "./event.model";
 
